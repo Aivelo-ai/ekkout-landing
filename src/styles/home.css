@@ -148,82 +148,65 @@
 
 .hero__inner {
   position: relative;
-  min-height: 620px;
+  min-height: 500px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 390px;
+  grid-template-columns: minmax(0, 1fr) 330px;
   align-items: center;
-  gap: 72px;
-  padding: 76px 0 70px;
+  gap: 56px;
+  padding: 56px 0 52px;
 }
 
 .hero__content {
-  max-width: 740px;
+  max-width: 620px;
 }
 
 .hero__title {
-  margin: 18px 0 0;
+  margin: 16px 0 0;
   font-family: var(--font-serif);
-  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  font-size: clamp(2.85rem, 5vw, 4.55rem);
   font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.06em;
-}
-
-.hero__title span {
-  color: var(--color-gold);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
 }
 
 .hero__lead {
-  max-width: 600px;
-  margin: 22px 0 0;
+  max-width: 560px;
+  margin: 20px 0 0;
   color: #cfd3dc;
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 .hero__chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 28px;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 30px;
-  padding: 0 12px;
-  border: 1px solid rgba(201, 162, 74, 0.42);
-  border-radius: 7px;
-  color: var(--color-gold-light);
-  font-size: 0.72rem;
-  font-weight: 700;
+  margin-top: 24px;
 }
 
 .hero-proof {
   position: relative;
-  padding: 30px;
+  padding: 26px;
   border: 1px solid var(--color-border-gold);
-  border-radius: 22px;
+  border-radius: 18px;
   color: var(--color-ink);
   background: rgba(245, 242, 236, 0.96);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
 }
 
 .hero-proof__icon {
-  width: 64px;
-  height: 64px;
+  width: 54px;
+  height: 54px;
   display: grid;
   place-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
   border: 1px solid var(--color-gold);
   border-radius: 999px;
   color: var(--color-gold);
@@ -232,9 +215,13 @@
 .hero-proof h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 2.7rem;
+  font-size: 2.25rem;
   line-height: 1;
   letter-spacing: -0.04em;
+}
+
+.hero__title span {
+  color: var(--color-gold);
 }
 
 .hero-proof p {
@@ -666,7 +653,7 @@
   }
 
   .hero__title {
-    font-size: clamp(2.7rem, 15vw, 4.2rem);
+    font-size: clamp(2.35rem, 12vw, 3.35rem);
   }
 
   .stats__grid,
