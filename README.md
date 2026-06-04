@@ -31,3 +31,4 @@ npm run build
 - `src/pages` : pages assemblées
 - `src/styles` : tokens, globals, composants
 Déploiement Vercel initial.
+D�ploiement Vercel initial.
