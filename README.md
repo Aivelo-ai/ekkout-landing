@@ -30,3 +30,4 @@ npm run build
 - `src/shared` : composants réutilisables
 - `src/pages` : pages assemblées
 - `src/styles` : tokens, globals, composants
+Déploiement Vercel initial.
