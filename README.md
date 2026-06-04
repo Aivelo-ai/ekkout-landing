@@ -1,6 +1,6 @@
 # EKKOUT Landing Page
 
-Starter React + Vite + TypeScript pour la landing page EKKOUT.
+Landing page React + Vite + TypeScript pour EKKOUT.
 
 ## Installation
 
@@ -17,18 +17,13 @@ npm run build
 
 ## Déploiement Vercel
 
-1. Créer un repo GitHub
-2. Pousser le projet
-3. Importer le repo dans Vercel
-4. Framework preset : Vite
-5. Build command : `npm run build`
-6. Output directory : `dist`
+- Framework preset : Vite
+- Build command : `npm run build`
+- Output directory : `dist`
 
 ## Structure
 
-- `src/features` : logique par domaine métier
 - `src/shared` : composants réutilisables
+- `src/features` : sections métier
 - `src/pages` : pages assemblées
-- `src/styles` : tokens, globals, composants
-Déploiement Vercel initial.
-D�ploiement Vercel initial.
+- `src/styles` : tokens et styles globaux

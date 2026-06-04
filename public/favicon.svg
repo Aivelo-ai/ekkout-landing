@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<rect width="100" height="100" rx="22" fill="#0f1a24"/>
-<text x="50" y="62" text-anchor="middle" font-size="44" font-family="Georgia" fill="#c9a15b">E</text>
+<rect width="100" height="100" rx="18" fill="#0E1A23"/>
+<path d="M29 88V25H71V88" stroke="#F5F2EC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="25" y1="21" x2="75" y2="21" stroke="#C9A24A" stroke-width="7" stroke-linecap="round"/>
+<polygon points="50,31 69,26 69,83 50,88" fill="#C9A24A"/>
+<circle cx="55" cy="58" r="2.2" fill="#0E1A23"/>
 </svg>

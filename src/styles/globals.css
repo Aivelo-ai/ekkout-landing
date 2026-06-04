@@ -8,11 +8,9 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   color: var(--color-ink);
-  background:
-    radial-gradient(circle at top left, rgba(201, 161, 91, 0.12), transparent 32rem),
-    var(--color-surface);
+  background: var(--color-ivory);
 }
 
 a {
@@ -26,15 +24,16 @@ textarea {
   font: inherit;
 }
 
-img {
+button {
+  border: 0;
+}
+
+img,
+svg {
   display: block;
-  max-width: 100%;
 }
 
 ::selection {
+  color: var(--color-ink);
   background: var(--color-gold-soft);
-}
-
-main {
-  overflow: hidden;
 }

@@ -1,11 +1,9 @@
-export type ProductType = "formation" | "ebook";
-
-export type Product = {
+export type Ebook = {
   id: string;
-  slug: string;
-  type: ProductType;
   title: string;
+  shortTitle: string;
+  category: string;
   description: string;
-  priceInCents: number;
-  features: string[];
+  price: string;
+  coverColor: string;
 };

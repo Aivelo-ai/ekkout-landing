@@ -1,27 +1,27 @@
 export type Expert = {
+  initials: string;
   name: string;
   role: string;
-  description: string;
-  initials: string;
+  experience: string;
 };
 
 export const experts: Expert[] = [
   {
+    initials: "FP",
     name: "Frédéric Palacin",
     role: "Communication & marketing digital",
-    description: "Plus de 10 ans d’expérience en agence de communication bordelaise.",
-    initials: "FP",
+    experience: "10 ans d’expérience",
   },
   {
+    initials: "JR",
     name: "Jean Robert",
     role: "Commerce & immobilier commercial",
-    description: "20 ans d’expérience terrain, ancien franchiseur.",
-    initials: "JR",
+    experience: "20 ans d’expérience",
   },
   {
+    initials: "PG",
     name: "Patrice Gerometta",
     role: "Fonds de commerce & transmission",
-    description: "15 ans d’expérience en direction d’agence immobilière.",
-    initials: "PG",
+    experience: "15 ans d’expérience",
   },
 ];

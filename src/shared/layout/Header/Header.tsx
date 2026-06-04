@@ -1,42 +1,40 @@
 import { UserRound } from "lucide-react";
 import { Button } from "@/shared/ui/Button/Button";
 import { Container } from "@/shared/ui/Container/Container";
+import { Logo } from "@/shared/ui/Logo/Logo";
 
-const navItems = [
-  { label: "Formations", href: "#formations" },
-  { label: "E-books", href: "#formations" },
-  { label: "Certification RS6977", href: "#certification" },
-  { label: "Les experts", href: "#experts" },
-  { label: "École EKKOUT", href: "#ecole" },
+const navigation = [
+  { label: "E-books", href: "#ebooks" },
+  { label: "Experts", href: "#experts" },
+  { label: "Bientôt", href: "#bientot" },
+  { label: "Blog", href: "#blog" },
 ];
 
 export function Header() {
   return (
-    <header className="header">
+    <header className="site-header">
       <Container>
-        <div className="header__inner">
-          <a className="logo" href="/" aria-label="Accueil EKKOUT">
-            <span className="logo__mark" aria-hidden="true">▥</span>
-            <span className="logo__text">
-              <strong>EKKOUT</strong>
-              <span>Formations & guides experts</span>
-            </span>
+        <div className="site-header__inner">
+          <a href="/" aria-label="Accueil EKKOUT">
+            <Logo />
           </a>
 
-          <nav className="nav" aria-label="Navigation principale">
-            {navItems.map((item) => (
-              <a key={item.href + item.label} href={item.href}>
+          <nav className="site-nav" aria-label="Navigation principale">
+            {navigation.map((item) => (
+              <a href={item.href} key={item.href}>
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <div className="header__actions">
-            <Button href="#espace" variant="light">
-              <UserRound size={17} />
+          <div className="header-actions">
+            <Button href="#espace" variant="outlineDark">
+              <UserRound size={16} />
               Mon espace
             </Button>
-            <Button href="#contact">Contact</Button>
+            <Button href="#ebooks" variant="ink">
+              Voir les e-books
+            </Button>
           </div>
         </div>
       </Container>

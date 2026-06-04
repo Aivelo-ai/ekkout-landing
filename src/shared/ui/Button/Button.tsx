@@ -1,6 +1,13 @@
 import type { AnchorHTMLAttributes, PropsWithChildren } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "light";
+type ButtonVariant = "ink" | "gold" | "outlineLight" | "outlineDark";
+
+const variantClassName: Record<ButtonVariant, string> = {
+  ink: "button--ink",
+  gold: "button--gold",
+  outlineLight: "button--outline-light",
+  outlineDark: "button--outline-dark",
+};
 
 type ButtonProps = PropsWithChildren<
   AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -10,12 +17,12 @@ type ButtonProps = PropsWithChildren<
 
 export function Button({
   children,
-  variant = "primary",
+  variant = "ink",
   className = "",
   ...props
 }: ButtonProps) {
   return (
-    <a className={`button button--${variant} ${className}`.trim()} {...props}>
+    <a className={`button ${variantClassName[variant]} ${className}`.trim()} {...props}>
       {children}
     </a>
   );

@@ -1,158 +1,137 @@
-import { ArrowRight, BadgeCheck, BookOpen, Clock3, GraduationCap, ShieldCheck, Target, UsersRound } from "lucide-react";
-import { Footer } from "@/shared/layout/Footer/Footer";
+import { ArrowRight, BadgeCheck, LockKeyhole } from "lucide-react";
 import { Header } from "@/shared/layout/Header/Header";
-import { Button } from "@/shared/ui/Button/Button";
+import { Footer } from "@/shared/layout/Footer/Footer";
 import { Container } from "@/shared/ui/Container/Container";
-import { SectionHeader } from "@/shared/ui/SectionHeader/SectionHeader";
-import { ProductGrid } from "@/features/products/ui/ProductGrid";
-import { ExpertsGrid } from "@/features/experts/ui/ExpertsGrid";
-import { CertificationBlock } from "@/features/certification/ui/CertificationBlock";
+import { Button } from "@/shared/ui/Button/Button";
+import { SectionTitle } from "@/shared/ui/SectionTitle/SectionTitle";
+import { EbookGrid } from "@/features/products/ui/EbookGrid";
+import { ExpertGrid } from "@/features/experts/ui/ExpertGrid";
+import { UpcomingGrid } from "@/features/upcoming/ui/UpcomingGrid";
+import { BlogGrid } from "@/features/blog/ui/BlogGrid";
 
-const trustItems = [
-  {
-    icon: <ShieldCheck size={24} />,
-    title: "Des contenus concrets",
-    text: "Basés sur des cas réels et l’expérience terrain.",
-  },
-  {
-    icon: <BadgeCheck size={24} />,
-    title: "Certification visible",
-    text: "RS6977 mise en avant dès le premier écran.",
-  },
-  {
-    icon: <Target size={24} />,
-    title: "Décisions sécurisées",
-    text: "Éviter les erreurs coûteuses avant signature.",
-  },
-  {
-    icon: <GraduationCap size={24} />,
-    title: "Évolutif école",
-    text: "Prêt pour les sessions physiques à Bordeaux.",
-  },
+const stats = [
+  { value: "45 ans", label: "d’expérience cumulée" },
+  { value: "3", label: "experts spécialisés" },
+  { value: "2", label: "guides essentiels" },
+  { value: "100%", label: "accessible en ligne" },
 ];
 
 export function HomePage() {
   return (
-    <>
+    <div className="site-shell">
       <Header />
 
       <main>
         <section className="hero">
           <Container>
             <div className="hero__inner">
-              <div>
-                <p className="eyebrow">Formations certifiées pour entrepreneurs</p>
+              <div className="hero__content">
+                <p className="eyebrow">Fonds de commerce · Bail commercial · Immobilier de commerce</p>
                 <h1 className="hero__title">
-                  Sécurisez votre projet de <span>fonds de commerce</span> avant de signer.
+                  Sécurisez l’achat, la cession et le bail de votre <span>fonds de commerce.</span>
                 </h1>
                 <p className="hero__lead">
-                  Formations en ligne et guides pratiques conçus par trois experts du commerce,
-                  de l’immobilier commercial et de la transmission d’entreprise.
+                  Des guides clairs, signés par trois experts qui cumulent 45 ans de terrain.
+                  Pour décider sans vous tromper, avant de signer.
                 </p>
 
                 <div className="hero__actions">
-                  <Button href="#formations">
-                    Voir les formations <ArrowRight size={17} />
+                  <Button href="#ebooks" variant="gold">
+                    Voir les e-books <ArrowRight size={16} />
                   </Button>
-                  <Button href="#formations" variant="secondary">
-                    Découvrir les e-books
+                  <Button href="#experts" variant="outlineLight">
+                    Rencontrer les experts
                   </Button>
                 </div>
 
-                <div className="hero__metrics">
-                  <span><UsersRound size={18} />45 ans d’expérience cumulée</span>
-                  <span><BadgeCheck size={18} />Formation certifiante RS6977</span>
-                  <span><Clock3 size={18} />Accès immédiat en ligne</span>
+                <div className="hero__chips">
+                  <span className="chip">France Compétences</span>
+                  <span className="chip">45 ans d’expérience</span>
+                  <span className="chip">3 experts</span>
+                  <span className="chip">
+                    <LockKeyhole size={13} /> Paiement sécurisé
+                  </span>
                 </div>
               </div>
 
-              <aside className="cert-card" aria-label="Certification RS6977">
-                <div className="cert-card__seal">
-                  <BadgeCheck size={38} />
+              <aside className="hero-proof" aria-label="Preuve de confiance certification">
+                <div className="hero-proof__icon">
+                  <BadgeCheck size={30} />
                 </div>
                 <h2>RS6977</h2>
                 <p>
-                  Certification enregistrée France Compétences, utilisée comme preuve de confiance
-                  centrale dans le parcours EKKOUT.
+                  Une preuve de confiance à structurer avec prudence dans les pages formations,
+                  certification et parcours d’achat.
                 </p>
-                <div className="cert-card__logos">
+                <div className="hero-proof__items">
                   <span>France Compétences</span>
-                  <span>République Française</span>
+                  <span>Formation certifiante</span>
+                  <span>Experts terrain</span>
                 </div>
               </aside>
             </div>
           </Container>
         </section>
 
-        <section className="trust-strip" aria-label="Arguments de confiance">
+        <section className="stats" aria-label="Chiffres clés EKKOUT">
           <Container>
-            <div className="trust-strip__grid">
-              {trustItems.map((item) => (
-                <div className="trust-item" key={item.title}>
-                  <div className="trust-item__icon">{item.icon}</div>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.text}</p>
-                  </div>
+            <div className="stats__grid">
+              {stats.map((stat) => (
+                <div className="stat" key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
                 </div>
               ))}
             </div>
           </Container>
         </section>
 
-        <section className="products-section" id="formations">
+        <section className="section section--cream" id="ebooks">
           <Container>
-            <div className="products-top">
-              <SectionHeader
-                eyebrow="Catalogue"
-                title="Nos formations et guides"
-                description="Un socle court, clair et orienté action pour accompagner les futurs acquéreurs, créateurs et commerçants."
-              />
-              <Button href="#contact" variant="light">
-                Voir tout le catalogue <ArrowRight size={16} />
-              </Button>
-            </div>
-
-            <ProductGrid />
+            <SectionTitle
+              eyebrow="Nos e-books"
+              title="Des guides pour décider sereinement"
+              description="Deux ressources premium pour comprendre les sujets qui coûtent cher quand ils sont mal maîtrisés : le bail commercial et le fonds de commerce."
+            />
+            <EbookGrid />
           </Container>
         </section>
 
-        <section className="experts-section" id="experts">
+        <section className="section section--cream" id="experts">
           <Container>
-            <div className="experts-top">
-              <SectionHeader
-                eyebrow="Expertise terrain"
-                title="Trois associés, 45 ans d’expérience cumulée"
-                description="Chaque profil renforce une brique de confiance : marketing, commerce, immobilier commercial et transmission d’entreprise."
-              />
-            </div>
-
-            <ExpertsGrid />
+            <SectionTitle
+              eyebrow="Les experts"
+              title="45 ans d’expérience, trois spécialités"
+              description="La crédibilité EKKOUT repose sur trois profils complémentaires : communication, commerce, immobilier commercial et transmission."
+            />
+            <ExpertGrid />
           </Container>
         </section>
 
-        <CertificationBlock />
-
-        <section className="cta-section" id="ecole">
+        <section className="section section--dark" id="bientot">
           <Container>
-            <div className="cta-card">
-              <div>
-                <p className="eyebrow">Phase 2</p>
-                <h2>Un socle prêt pour l’école physique EKKOUT.</h2>
-                <p>
-                  La landing est pensée pour évoluer vers une page campus, un calendrier de sessions,
-                  des inscriptions présentielles et un espace apprenant plus complet.
-                </p>
-              </div>
-              <Button href="#contact">
-                Préparer la suite <BookOpen size={17} />
-              </Button>
-            </div>
+            <SectionTitle
+              eyebrow="Bientôt"
+              title="Ce qui arrive chez EKKOUT"
+              description="La structure est pensée pour évoluer vers les formations en ligne, la certification, puis l’école physique."
+            />
+            <UpcomingGrid />
+          </Container>
+        </section>
+
+        <section className="section section--cream" id="blog">
+          <Container>
+            <SectionTitle
+              eyebrow="Ressources"
+              title="Le blog"
+              description="Des contenus pédagogiques pour capter le trafic SEO et préparer les futurs clients avant l’achat."
+            />
+            <BlogGrid />
           </Container>
         </section>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
