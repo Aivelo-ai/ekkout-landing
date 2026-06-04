@@ -54,20 +54,8 @@ export function HomePage() {
                 </div>
               </div>
 
-              <aside className="hero-proof" aria-label="Preuve de confiance certification">
-                <div className="hero-proof__icon">
-                  <BadgeCheck size={30} />
-                </div>
-                <h2>RS6977</h2>
-                <p>
-                  Une preuve de confiance à structurer avec prudence dans les pages formations,
-                  certification et parcours d’achat.
-                </p>
-                <div className="hero-proof__items">
-                  <span>France Compétences</span>
-                  <span>Formation certifiante</span>
-                  <span>Experts terrain</span>
-                </div>
+              <aside className="hero-visual" aria-label="Visuel EKKOUT immobilier de commerce">
+                <img src="/images/ekkout-hero-visual.png" alt="" />
               </aside>
             </div>
           </Container>
